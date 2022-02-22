@@ -39,6 +39,44 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
+
+### Docker devl
+```
+docker run -itd --name rtl-tdd-todos -p 3000:3000 node:13.2-0-bullseye
+docker commit retl-tdd-todos jisu/ksa:rtl-tdd-todos
+docker pull jisu/ksa:rtl-tdd-todos
+docker run -itd --name rtl-tdd-todos -p 3000:3000 jisu/rtl-tdd todos 
+```
+
+## Docker Delivery 
+
+```
+docker container stop rtl-tdd-todos
+docker pull jisu/ksa:rtl-tdd-todos
+docker run -itd --rm --name rtl-tdd-todos -p 3000:3000 jisu/rtl-tdd todos
+
+```
+
+## Git local config
+```
+git init
+git config --global user.name 'jisu'
+git config --global user.email 'kosu2389@naver.com'
+git branch -M main
+```
+## git remote config
+ID, PW는 윈도우즈 자격증명관리에 등록을 했다. 
+```
+git remote add origin https://github.com/kongjisu/rtl-tdd-todos.git
+
+git push -u origin main 
+
+```
+
+
+## `npx create-react-app rtl-tdd-todos`
+
+
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
