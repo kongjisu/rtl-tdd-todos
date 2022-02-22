@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from "react";
+import React, { useState, useCallback  } from "react";
 
 const TodoForm =({onInsert}) => {
     const [value, setValue] = useState('');
@@ -23,8 +23,6 @@ const TodoForm =({onInsert}) => {
         </from>
 
     );
-    
-
-}
+    }
 
 export default TodoForm;
